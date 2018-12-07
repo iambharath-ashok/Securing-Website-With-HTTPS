@@ -7,7 +7,7 @@ A brief instruction about HTTPS, its Role in Securing the Website and how to set
 ## How to setup HTTPS and SSL on the URL
 
 
-### HTTP - Hyper Text Transfer Protocol -
+### HTTP - Hyper Text Transfer Protocol
 
 	- 	HTTP is an Internet communication Protocol
 	-   Is the method by which data is moved around the Web
