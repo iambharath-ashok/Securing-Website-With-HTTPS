@@ -87,7 +87,7 @@
 			-	Covers multiple domains
 
 				
-### TLS - Transport Layer Security Protocol
+## TLS - Transport Layer Security Protocol
 	
 - 	Protects data with 3 key layers 
 
@@ -96,7 +96,7 @@
 	-	3.  Authentication
 	
 		
-### HSTS -	HTTP Strict Transport Security
+## HSTS -	HTTP Strict Transport Security
 	
 -	HSTS tells browsers to request HTTPS pages automatically - even when user enters HTTP at the browser bar
 -	Also tells Google Servers to serve secure URLs 
@@ -114,7 +114,7 @@
 -	This prevents hackers from sniffing out sensitive information as it passes through the internet
 -	HTTPS will be secured by certificates
 	
-## How to setup HTTPS 
+## 2.	How to setup HTTPS 
 
 ###	Steps to setting up HTTPS on the websites
 
@@ -125,14 +125,14 @@
 	5.	Update your site to use HTTPS
 	
 	
-	1.	Host Application with a dedicated a IP Address
+####	1.	Host Application with a dedicated a IP Address
 	
 		-	SSL Certificates requires dedicated IP Addresses
 		-	Smaller Web Hosting plans will put the Application on the shared IP Address
 			-	Where multiple websites are using the same location
 	
 	
-	2.	Buy a Certificate
+####	2.	Buy a Certificate
 	
 		-	Certificate is like ID Card on the site - that tells website is ours
 		-	This accomplished by creating a SSL Certificate
@@ -154,7 +154,7 @@
 					-	CA will vouch your site details on the Certificate
 					-	In order to recognized from them we need to buy from them
 					
-	3.	Activate the Certificate
+####	3.	Activate the Certificate
 		
 		-	Our Web Host can activate the Certificate 
 		-	This is a complicated task
@@ -171,12 +171,12 @@
 			-	Copy the CSR and give it to the SSL Cert issuer so that they will Establish our Identity
 	
 	
-	4.	Install the Certificate
+####	4.	Install the Certificate
 	
 		-	We already have the Certificate in hand and paste that through web host control panel
 	
 	
-	5.	Update the site to use HTTPS
+####	5.	Update the site to use HTTPS
 	
 		-	Once we access the site via HTTPS then it will start loading 
 		-	Enabling HTTPS to few pages like Cart, Checkout will make sense - may result in performance due to encryption processing
@@ -198,7 +198,7 @@
 				
 				-	This will ensure that any one accessing the page with HTTP will be automatically redirected to HTTPS 
 				
-	6.	Setup 301 redirects from HTTP to HTTPS or consider HSTS
+####	6.	Setup 301 redirects from HTTP to HTTPS or consider HSTS
 
 		-	301 Redirect set up will done at Apache server 
 		- 	Automatically redirects the HTTP to HTTPS at server-side
@@ -236,4 +236,15 @@ Setting up 301 Redirects
 			RewriteCond %{HTTPS} off
 			RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 		
+	
+	
+	
+	
 
+
+			
+			
+			
+			
+	
+	
