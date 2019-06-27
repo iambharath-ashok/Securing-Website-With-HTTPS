@@ -134,108 +134,108 @@
 	
 ####	2.	Buy a Certificate
 	
-		-	Certificate is like ID Card on the site - that tells website is ours
-		-	This accomplished by creating a SSL Certificate
-		
-			a).	What is a Certificate ?
-				
-				-	A Certificate is simply a paragraph of letters and numbers - thats only our site knows
-					-	 It's like a long password
-				-	When people visit our site via HTTPS, then that's password will get checked
-					-	It automatically verifies that our website is who you say it is
-				-	It automatically encrypts all the information that are coming and going from it
-		
-			b).	How to get a Certificate
+	-	Certificate is like ID Card on the site - that tells website is ours
+	-	This accomplished by creating a SSL Certificate
+	
+		a).	What is a Certificate ?
 			
-				-	Technically we can create our own Certificate - called self-signed certificate
-				-	Or else we can buy from Certificate Authorities (CA)
-					-	Certificate Authorities will also have a copy of Password
-					-	Popular Browsers will check with CA to verify the certificate
-					-	CA will vouch your site details on the Certificate
-					-	In order to recognized from them we need to buy from them
+			-	A Certificate is simply a paragraph of letters and numbers - thats only our site knows
+				-	 It's like a long password
+			-	When people visit our site via HTTPS, then that's password will get checked
+				-	It automatically verifies that our website is who you say it is
+			-	It automatically encrypts all the information that are coming and going from it
+	
+		b).	How to get a Certificate
+		
+			-	Technically we can create our own Certificate - called self-signed certificate
+			-	Or else we can buy from Certificate Authorities (CA)
+				-	Certificate Authorities will also have a copy of Password
+				-	Popular Browsers will check with CA to verify the certificate
+				-	CA will vouch your site details on the Certificate
+				-	In order to recognized from them we need to buy from them
 					
 ####	3.	Activate the Certificate
 		
-		-	Our Web Host can activate the Certificate 
-		-	This is a complicated task
-		
-		a). Activating a Cert by Ourself
-		
-			-	Generate the CSR - Certificate and Signing Request
-			-	We can do this from Web Hosting Control Panel 
-			-	Go to Admin Area and choose to Generate Certificate and Signing Request
-			-	Fill all the details like EMail, Domain Name
-			
-		b). Adding CSR to Cert to CA
-			
-			-	Copy the CSR and give it to the SSL Cert issuer so that they will Establish our Identity
+	-	Our Web Host can activate the Certificate 
+	-	This is a complicated task
 	
+	a). Activating a Cert by Ourself
+	
+		-	Generate the CSR - Certificate and Signing Request
+		-	We can do this from Web Hosting Control Panel 
+		-	Go to Admin Area and choose to Generate Certificate and Signing Request
+		-	Fill all the details like EMail, Domain Name
+		
+	b). Adding CSR to Cert to CA
+		
+		-	Copy the CSR and give it to the SSL Cert issuer so that they will Establish our Identity
+
 	
 ####	4.	Install the Certificate
 	
-		-	We already have the Certificate in hand and paste that through web host control panel
+	-	We already have the Certificate in hand and paste that through web host control panel
 	
 	
 ####	5.	Update the site to use HTTPS
+
+	-	Once we access the site via HTTPS then it will start loading 
+	-	Enabling HTTPS to few pages like Cart, Checkout will make sense - may result in performance due to encryption processing
 	
-		-	Once we access the site via HTTPS then it will start loading 
-		-	Enabling HTTPS to few pages like Cart, Checkout will make sense - may result in performance due to encryption processing
-		
-		
-		a).	Updating all links to the target page to HTTPS
-		
-			-	Selected pages will be given link with HTTPS, so that user while accessing will use HTTPS
-		
-		
-		b).	Do server side redirect to HTTPS irrespective of from user access the pages
-		
-		
-		c).	Mode-rewrite server side approach 
-		
-		
-			-	No need to make any changes in the server side pages 
-			-	Change the Apache Configuration
-				
-				-	This will ensure that any one accessing the page with HTTP will be automatically redirected to HTTPS 
+	
+	a).	Updating all links to the target page to HTTPS
+	
+		-	Selected pages will be given link with HTTPS, so that user while accessing will use HTTPS
+	
+	
+	b).	Do server side redirect to HTTPS irrespective of from user access the pages
+	
+	
+	c).	Mode-rewrite server side approach 
+	
+	
+		-	No need to make any changes in the server side pages 
+		-	Change the Apache Configuration
+			
+			-	This will ensure that any one accessing the page with HTTP will be automatically redirected to HTTPS 
 				
 ####	6.	Setup 301 redirects from HTTP to HTTPS or consider HSTS
 
-		-	301 Redirect set up will done at Apache server 
-		- 	Automatically redirects the HTTP to HTTPS at server-side
-				
+	-	301 Redirect set up will done at Apache server 
+	- 	Automatically redirects the HTTP to HTTPS at server-side
+			
 
-Notes :
+##	Notes :
 
-	1. 	HTTPS doesn't mean that information on the site is secure -	it only means that informations coming and going from server will be secured by encryption
-	2.	Ensure high level of security with 2048 bit encryption Certificates
+-	1. 	HTTPS doesn't mean that information on the site is secure -	it only means that informations coming and going from server will be secured by encryption
+-	2.	Ensure high level of security with 2048 bit encryption Certificates
 			
 			
 
-Search Engine Optimization
+##	Search Engine Optimization
 
-	-	Google advices to use HTTPS to whole site 
-	-	Doesn't affect the accessibility or performance
+-	Google advices to use HTTPS to whole site 
+-	Doesn't affect the accessibility or performance
+
+##	Changing Your Website Link
+
+-	Take the advantage of Relative URLs instead of changing all the URLs from HTTP to HTTPS
 	
-Changing Your Website Link
-
-	-	Take the advantage of Relative URLs instead of changing all the URLs from HTTP to HTTPS
 	
+##	Setting up 301 Redirects
+
+
+-	301 Redirects both  
+	-	Alerts search engines that our site addresses have changed
+	-	Redirect any one who has bookmarked a page on our site to HTTPS
 	
-Setting up 301 Redirects
-
-
-	-	301 Redirects both  
-		-	Alerts search engines that our site addresses have changed
-		-	Redirect any one who has bookmarked a page on our site to HTTPS
-		
-	-	Configuration	
-		
-		-	Edit the .htaccess file on the root folder by adding
-		
-			RewriteEngine On
-			RewriteCond %{HTTPS} off
-			RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-		
+-	Configuration	
+	
+	-	Edit the .htaccess file on the root folder by adding
+	
+		RewriteEngine On
+		RewriteCond %{HTTPS} off
+		RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+	
 	
 	
 	
