@@ -1,7 +1,6 @@
 # Securing-Website-With-HTTPS
-A brief instruction about HTTPS, its Role in Securing the Website and how to set up the HTTPS on the Website
 
-
+-	A brief instruction about HTTPS, its Role in Securing the Website and how to set up the HTTPS on the Website
 
 
 ## How to setup HTTPS and SSL on the URL
@@ -9,19 +8,18 @@ A brief instruction about HTTPS, its Role in Securing the Website and how to set
 
 ### HTTP - Hyper Text Transfer Protocol
 
-	- 	HTTP is an Internet communication Protocol
-	-   Is the method by which data is moved around the Web
-		-	  Plus ---> Fast and Reliable 
-		- 	Minus ----> Data is not secured and can hack the data in lot of ways that are being transfered from server
+- 	HTTP is an Internet communication Protocol
+-   Is the method by which data is moved around the Web
+	-	Plus ---> Fast and Reliable 
+	- 	Minus ----> Data is not secured and can hack the data in lot of ways that are being transfered from server
 		
 ### HTTPS - Hyper Text Transfer Protocol Secure
 
+-	Internet Communication Protocol that protects integrity and confidentiality of data b/w user computer and the site
 
-	-	Internet Communication Protocol that protects integrity and confidentiality of data b/w user computer and the site
-
-	-	It's a secure protocol on top of HTTP
-	-	Provides solution to Data Protection Issues
-	-	HTTPS Protects data by encrypting it using SSL Certificate before sending it either way
+-	It's a secure protocol on top of HTTP
+-	Provides solution to Data Protection Issues
+-	HTTPS Protects data by encrypting it using SSL Certificate before sending it either way
 
 	
 		a). How HTTPS Works?
