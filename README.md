@@ -42,14 +42,14 @@
 			-	It protects against Man-in-Middle attacks
 			
 	
-### SSL Certificate 
+## SSL Certificate 
 
 -	A SSL Certificate contains both Private and Public Encryption Key Pairs
 -	These key pairs are like passwords
 -	Keys are long strings of alphanumeric characters used to encrypt the data - so that it's would be very hard to crack
 
 	
-####	Different types of SSL Certificates 
+##	Different types of SSL Certificates 
 		
 -	Type of SSL Certificate required depends on Business Needs
 -	SSL Certificates are grouped by Validation Level and Level of coverage
@@ -91,9 +91,9 @@
 	
 - 	Protects data with 3 key layers 
 
-	1.	Encryption
-	2.	Data Integrity
-	3.  Authentication
+	-	1.	Encryption
+	-	2.	Data Integrity
+	-	3.  Authentication
 	
 		
 ### HSTS -	HTTP Strict Transport Security
@@ -116,7 +116,7 @@
 	
 ## How to setup HTTPS 
 
-2.	Steps to setting up HTTPS on the websites
+###	Steps to setting up HTTPS on the websites
 
 	1.	Host Application with a dedicated IP Address
 	2.	Buy a Certificate
@@ -236,15 +236,4 @@ Setting up 301 Redirects
 			RewriteCond %{HTTPS} off
 			RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 		
-	
-	
-	
-	
 
-
-			
-			
-			
-			
-	
-	
