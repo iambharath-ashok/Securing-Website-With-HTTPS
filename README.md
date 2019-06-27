@@ -22,97 +22,97 @@
 -	HTTPS Protects data by encrypting it using SSL Certificate before sending it either way
 
 	
-		a). How HTTPS Works?
+####	a). How HTTPS Works?
 		
-			-	Data sent through HTTPS is secured via TLS - Transport Layer Security Protocol, which provides three key layers of protection
+	-	Data sent through HTTPS is secured via TLS - Transport Layer Security Protocol, which provides three key layers of protection
+	
+		1.	Encryption
+		
+			-	Encrypting the exchanged data to keep it secure from eavesdroppers
+			-	When user is browsing the website nobody can track their activities across multiple pages, listens to their communication
+			-	Nobody can steal the information
 			
-				1.	Encryption
-				
-					-	Encrypting the exchanged data to keep it secure from eavesdroppers
-					-	When user is browsing the website nobody can track their activities across multiple pages, listens to their communication
-					-	Nobody can steal the information
-					
-				2.	Data Integrity
-					
-					-	Data can't be corrupted or modified during transfer - both intentionally or otherwise	
-					
-				3.	Authentication
-				
-					-	Proves that users communicate with intended website
-					-	It protects against Man-in-Middle attacks
+		2.	Data Integrity
+			
+			-	Data can't be corrupted or modified during transfer - both intentionally or otherwise	
+			
+		3.	Authentication
+		
+			-	Proves that users communicate with intended website
+			-	It protects against Man-in-Middle attacks
 			
 	
 ### SSL Certificate 
 
-	-	A SSL Certificate contains both Private and Public Encryption Key Pairs
-	-	These key pairs are like passwords
-	-	Keys are long strings of alphanumeric characters used to encrypt the data - so that it's would be very hard to crack
-	
-	
-	Different types of SSL Certificates 
-		
-		-	Type of SSL Certificate required depends on Business Needs
-		-	SSL Certificates are grouped by Validation Level and Level of coverage
-	
-	
-		a).	SSL Certificates by Three Levels of Validation
-			
-			1.	Domain Validation
-			
-				- 	Basic Level of validation
-				-	SSL Certificates will cause web browser to display a closed lock image next to the website address demonstrating that site is secure
-			
-			2.	Organization Validation (a.k.a Company Validation)
-			
-				-  Second Level of validation
-				-	The issuer is confirming the fact that the company requesting the certificate does indeed own the rights to the domain for which the certificate is being issued	
-			
-			3.	Extended Validation
+-	A SSL Certificate contains both Private and Public Encryption Key Pairs
+-	These key pairs are like passwords
+-	Keys are long strings of alphanumeric characters used to encrypt the data - so that it's would be very hard to crack
 
-				-	Extended SSL Certificates provides highest level of assurance that a site is legitimate and trustworthy
 	
-		b).	SSL Certificates by Coverage Level
+####	Different types of SSL Certificates 
+		
+-	Type of SSL Certificate required depends on Business Needs
+-	SSL Certificates are grouped by Validation Level and Level of coverage
+
+
+#####	a).	SSL Certificates by Three Levels of Validation
 			
-			1.	Single Domain SSL Certificates 
+		1.	Domain Validation
+		
+			- 	Basic Level of validation
+			-	SSL Certificates will cause web browser to display a closed lock image next to the website address demonstrating that site is secure
+		
+		2.	Organization Validation (a.k.a Company Validation)
+		
+			-  Second Level of validation
+			-	The issuer is confirming the fact that the company requesting the certificate does indeed own the rights to the domain for which the certificate is being issued	
+		
+		3.	Extended Validation
+
+			-	Extended SSL Certificates provides highest level of assurance that a site is legitimate and trustworthy
+	
+#####	b).	SSL Certificates by Coverage Level
 			
-				-	One and only domain
-				
-			2.	Wildcard Domain SSL Certificates
-				
-				-	Support one domain and all subdomains underneath that domain
-				
-				
-			3.	Mutli Domain SSL Certificates
-				
-				-	Covers multiple domains
+		1.	Single Domain SSL Certificates 
+		
+			-	One and only domain
+			
+		2.	Wildcard Domain SSL Certificates
+			
+			-	Support one domain and all subdomains underneath that domain
+			
+			
+		3.	Mutli Domain SSL Certificates
+			
+			-	Covers multiple domains
 
 				
 ### TLS - Transport Layer Security Protocol
 	
-	- 	Protects data with 3 key layers 
+- 	Protects data with 3 key layers 
+
+	1.	Encryption
+	2.	Data Integrity
+	3.  Authentication
 	
-		1.	Encryption
-		2.	Data Integrity
-		3.  Authentication
-		
 		
 ### HSTS -	HTTP Strict Transport Security
 	
-	-	HSTS tells browsers to request HTTPS pages automatically - even when user enters HTTP at the browser bar
-	-	Also tells Google Servers to serve secure URLs 
-	
-		-	HSTS minimizes risk of serving insecure pages 
+-	HSTS tells browsers to request HTTPS pages automatically - even when user enters HTTP at the browser bar
+-	Also tells Google Servers to serve secure URLs 
+
+	-	HSTS minimizes risk of serving insecure pages 
 				
         
-1.	Why HTTPS is required?
+## 1.	Why HTTPS is required?
 
 
-	-	If we are collecting any sensitive information on our websites like username and password
-		-	Then our websites needs to be secured 
-	-	Best way to do this by enabling HTTPS, also known as SSL (Secure Socket Layer)
-		-	So that any information going from the server is automatically encrypted
-	-	This prevents hackers from sniffing out sensitive information as it passes through the internet
-	-	HTTPS will be secured by certificates
+-	If we are collecting any sensitive information on our websites like username and password
+	-	Then our websites needs to be secured 
+-	Best way to do this by enabling HTTPS, also known as SSL (Secure Socket Layer)
+	-	So that any information going from the server is automatically encrypted
+-	This prevents hackers from sniffing out sensitive information as it passes through the internet
+-	HTTPS will be secured by certificates
 	
 ## How to setup HTTPS 
 
